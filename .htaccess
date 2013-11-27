@@ -1,2 +1,14 @@
 AddHandler php5-cgi .html .htm
 AddDefaultCharset UTF-8
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /~brownlee/test_press/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /~brownlee/test_press/index.php [L]
+</IfModule>
+
+# END WordPress
