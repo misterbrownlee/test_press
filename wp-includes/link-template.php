@@ -131,7 +131,7 @@ function get_permalink( $id = 0, $leavename = false ) {
 			// show default category in permalinks, without
 			// having to assign it explicitly
 			if ( empty($category) ) {
-				$default_category = get_category( get_option( 'default_category' ) );
+				$default_category = get_term( get_option( 'default_category' ), 'category' );
 				$category = is_wp_error( $default_category ) ? '' : $default_category->slug;
 			}
 		}
@@ -1425,6 +1425,7 @@ function get_adjacent_post_link( $format, $link, $in_same_cat = false, $excluded
 		if ( empty( $post->post_title ) )
 			$title = $previous ? __( 'Previous Post' ) : __( 'Next Post' );
 
+		/** This filter is documented in wp-includes/post-template.php */
 		$title = apply_filters( 'the_title', $title, $post->ID );
 		$date = mysql2date( get_option( 'date_format' ), $post->post_date );
 		$rel = $previous ? 'prev' : 'next';
