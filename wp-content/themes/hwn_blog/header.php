@@ -44,21 +44,6 @@
 		<div id="container">
 
 			<header class="header" role="banner">
-				<div class="topcoat-navigation-bar">
-            <div class="topcoat-navigation-bar__item left quarter">
-                <a id="slide-menu-button" class="topcoat-icon-button--quiet slide-menu-button">
-                    <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-                </a>
-            </div>
-            <div class="topcoat-navigation-bar__item center half">
-                <h1 class="topcoat-navigation-bar__title">Topcoat Drawer</h1>
-            </div>
-            <div class="topcoat-navigation-bar__item right quarter">
-                <a class="topcoat-icon-button--quiet">
-                    <span class="topcoat-icon topcoat-icon--edit"></span>
-                </a>
-            </div>
-        </div>
 
 				<div id="inner-header" class="wrap clearfix">
 

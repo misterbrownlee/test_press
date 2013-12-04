@@ -36,20 +36,18 @@ jQuery(document).ready(function($) {
     it, so be sure to research and find the one
     that works for you best.
     */
-    console.log("ready");
 
     /* getting viewport width */
     var responsive_viewport = $(window).width();
 
     /* if is below 481px */
-    // if (responsive_viewport < 481) {
-    //   console.log('load script');
-    //   $("body").mobile_menu({
-    //       menu_width: 200,
-    //       menu: 'nav[role=navigation] > div',
-    //       page_id: 'container',
-    //       prepend_button_to: '#inner-header'
-    //     });
+    if (responsive_viewport < 481) {
+
+      $('.header').prepend("<div class='mobile-nav-button'>Toggle Navigation</div>");
+      $('.mobile-nav-button').on('click', function (event) {
+        console.log('toggle mobile nav');
+      });
+
     } /* end smallest screen */
 
     /* if is larger than 481px */
@@ -71,6 +69,9 @@ jQuery(document).ready(function($) {
     if (responsive_viewport > 1030) {
 
     }
+
+
+  // add all your scripts here
 
 
 }); /* end of as page load scripts */

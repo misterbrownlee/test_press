@@ -1,0 +1,19 @@
+// override variables.less and other
+// bootstrap bits here
+// for mobile.  use size based sheets for other media queries
+
+@brand-primary: rgb(42, 100, 150);
+@link-hover-color: lighten(@link-color, 15%);
+
+a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.navbar-toggle {
+  margin: 5px;
+  margin-left: 10px;
+  float: left;
+}
